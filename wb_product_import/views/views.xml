@@ -1,0 +1,29 @@
+<odoo>
+  <data>
+    <record  id="wb_product_import_form_inherit" model="ir.ui.view">
+      <field name="name">wb_product_import_inherit</field>
+      <field name="model">product.template</field>
+      <field name="inherit_id" ref="product.product_template_form_view"/>
+      <field name="arch" type="xml">
+           <xpath expr="//page[4]" position="before" >
+            <page name="Import Product" string="Importación">
+              <group string="Importación">
+                <field name="tariff_fraction"/>
+                <field name="tariff_percentage"/>
+                <field name="general_import_tax"/>
+                <field name="value_added_tax"/>
+                <field name="customs_processing_right"/>
+                <field name="prevalidation"/>
+                <field name="vat_prevalidation"/>
+                <field name="customs_charges"/>
+                <field name="storages"/>
+                <field name="delays"/>
+                <field name="land_freight"/>
+                <field name="salary_customs_agents"/>
+              </group>
+            </page>
+          </xpath>
+      </field>
+    </record>
+  </data>
+</odoo>
