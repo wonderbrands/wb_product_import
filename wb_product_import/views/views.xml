@@ -21,7 +21,7 @@
       <field name="model">purchase.order</field>
       <field name="inherit_id" ref="purchase.purchase_order_form"/>
       <field name="arch" type="xml">
-           <xpath expr="//page[1]" position="before" >
+           <xpath expr="//page[1]" position="after" >
             <page name="Import Product" string="Importación">
               <group string="Importación">
                <field name="general_import_tax"/>
@@ -33,12 +33,50 @@
                <field name="storages"/>
                <field name="delays"/>
                <field name="land_freight"/>
+               <field name="sea_freight"/>
                <field name="salary_customs_agents"/>
               </group>
             </page>
           </xpath>
       </field>
     </record>
+
+        <record model="ir.ui.view" id="noms_tree_view">
+            <field name="name">NOMS Tree</field>
+            <field name="model">l10n.mx.edi.noms</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="code"/>
+                    <field name="name"/>
+                </tree>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="noms_form_view">
+            <field name="name">NOMS Form</field>
+            <field name="model">l10n.mx.edi.noms</field>
+            <field name="arch" type="xml">
+                <form>
+                        <group>
+                            <field name="code" required="1"/>
+                            <field name="name" required="1"/>
+                        </group>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="noms_action">
+            <field name="name">NOMS</field>
+            <field name="res_model">l10n.mx.edi.noms</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_id" ref="noms_tree_view"/>
+        </record>
+
+
+        <menuitem name="NOMS" id="menu_noms_menu"
+                  action="noms_action" parent="base.menu_config"
+                  sequence="2"/>
+
 
 
   </data>

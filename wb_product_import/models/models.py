@@ -9,7 +9,7 @@ class import_product(models.Model):
 
     tariff_percentage = fields.Float(string='Porcentaje de arancel',
                                           help="Porcentaje Impuesto del Arancel")
-    # official_mexican_standards = fields.Many2one('',string='NOMS', help="Normas Oficiales Mexicanas")
+    official_mexican_standards = fields.Many2one('l10n_mx_edi_noms',string='NOMS', help="Normas Oficiales Mexicanas")
 
 class import_product_purchase(models.Model):
     _inherit = 'purchase.order'
@@ -27,3 +27,10 @@ class import_product_purchase(models.Model):
     storages = fields.Monetary(string='Almacenajes')
     delays = fields.Monetary(string='Demoras')
     salary_customs_agents = fields.Monetary(string='Honorarios Agente Aduanal')
+
+class l10nmxnoms(models.Model):
+    _name = 'l10n_mx_edi_noms'
+    _description = 'Catalogo de Normas Mexicanas para importacion'
+
+    code = fields.Char(string='Codigo')
+    name = fields.Char(string='Nombre')

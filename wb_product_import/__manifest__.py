@@ -33,7 +33,7 @@ Honorarios Agente Aduanal
     'version': '12.0.1',
 
     # any module necessary for this one to work correctly
-    'depends': ['base','product','purchase'],
+    'depends': ['base','product','purchase','l10n_mx_edi_external_trade'],
 
     # always loaded
     'data': [
