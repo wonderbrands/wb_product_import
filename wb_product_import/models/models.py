@@ -29,7 +29,7 @@ class import_product_purchase(models.Model):
     salary_customs_agents = fields.Monetary(string='Honorarios Agente Aduanal')
 
 class l10nmxnoms(models.Model):
-    _name = 'l10n_mx_edi_noms'
+    _name = 'l10n.mx.edi.noms'
     _description = 'Catalogo de Normas Mexicanas para importacion'
 
     code = fields.Char(string='Codigo')
