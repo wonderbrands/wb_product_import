@@ -44,7 +44,7 @@
 
         <record model="ir.ui.view" id="noms_tree_view">
             <field name="name">NOMS Tree</field>
-            <field name="model">l10n.mx.edi.noms</field>
+            <field name="model">l10n.mx.edi.noms.noms</field>
             <field name="arch" type="xml">
                 <tree>
                     <field name="code"/>
@@ -55,7 +55,7 @@
 
         <record model="ir.ui.view" id="noms_form_view">
             <field name="name">NOMS Form</field>
-            <field name="model">l10n.mx.edi.noms</field>
+            <field name="model">l10n.mx.edi.noms.noms</field>
             <field name="arch" type="xml">
                 <form>
                         <group>
@@ -68,7 +68,7 @@
 
         <record model="ir.actions.act_window" id="noms_action">
             <field name="name">NOMS</field>
-            <field name="res_model">l10n.mx.edi.noms</field>
+            <field name="res_model">l10n.mx.edi.noms.noms</field>
             <field name="view_mode">tree,form</field>
             <field name="view_id" ref="noms_tree_view"/>
         </record>
