@@ -71,13 +71,5 @@
             <field name="view_mode">tree,form</field>
             <field name="view_id" ref="noms_tree_view"/>
         </record>
-
-
-        <menuitem name="NOMS" id="menu_noms_menu"
-                  action="noms_action" parent="base.menu_config"
-                  sequence="2"/>
-
-
-
   </data>
 </odoo>
