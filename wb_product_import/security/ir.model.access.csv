@@ -1,2 +1,2 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-access_wb_product_import_wb_product_import,wb_product_import.wb_product_import,model_wb_product_import_wb_product_import,,1,0,0,0
+access_l10n_mx_edi_noms,.l10n_mx_edi_noms,model_l10n_mx_edi_noms,,1,1,1,1
