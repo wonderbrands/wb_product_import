@@ -9,6 +9,7 @@
             <page name="Import Product" string="Importación">
               <group string="Importación">
                 <field name="tariff_percentage" />
+                <field name="official_mexican_standards"/>
                 <field name="l10n_mx_edi_tariff_fraction_id" />
               </group>
             </page>
