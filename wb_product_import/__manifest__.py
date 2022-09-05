@@ -8,19 +8,19 @@
     'description': """
     Se agregan campos necesarios para el seguimiento de valores que definen el precio total del producto importado:
         Fracción arancelaria
-Porcentaje de arancel
-NOM
-Flete
-IGI
-IVA
-DTA
-PRV
-IVA / PRV
-Gastos en aduana
-Almacenajes
-Demoras
-Flete terrestre
-Honorarios Agente Aduanal
+        Porcentaje de arancel
+        NOM
+        Flete
+        IGI
+        IVA
+        DTA
+        PRV
+        IVA / PRV
+        Gastos en aduana
+        Almacenajes
+        Demoras
+        Flete terrestre
+        Honorarios Agente Aduanal
     """,
 
     'author': "Wonder Brands",
@@ -30,14 +30,16 @@ Honorarios Agente Aduanal
     # Check https://github.com/odoo/odoo/blob/12.0/odoo/addons/base/data/ir_module_category_data.xml
     # for the full list
     'category': 'Inventory',
-    'version': '12.0.1',
+    'version': '15.0',
 
     # any module necessary for this one to work correctly
-    'depends': ['base','product','purchase','l10n_mx_edi_external_trade'],
+    'depends': ['base','product','purchase'],
 
     # always loaded
     'data': [
-        # 'security/ir.model.access.csv',
+        'security/ir.model.access.csv',
+        #'security/security.xml',
+        'data/import.noms.csv',
         'views/views.xml',
         'views/templates.xml',
     ],

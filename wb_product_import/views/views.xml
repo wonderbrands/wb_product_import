@@ -5,15 +5,17 @@
       <field name="model">product.template</field>
       <field name="inherit_id" ref="product.product_template_form_view"/>
       <field name="arch" type="xml">
-           <xpath expr="//page[4]" position="before" >
+           <notebook>
             <page name="Import Product" string="Importación">
-              <group string="Importación">
-                <field name="tariff_percentage" />
-                <field name="official_mexican_standards"/>
-                <field name="l10n_mx_edi_tariff_fraction_id" />
-              </group>
+                <group>
+                  <group string="Importación">
+                    <field name="tariff_percentage" />
+                    <field name="official_mexican_standards"/>
+                   <!-- <field name="l10n_mx_edi_tariff_fraction_id" /> -->
+                  </group>
+                </group>
             </page>
-          </xpath>
+          </notebook>
       </field>
     </record>
 
@@ -22,7 +24,7 @@
       <field name="model">purchase.order</field>
       <field name="inherit_id" ref="purchase.purchase_order_form"/>
       <field name="arch" type="xml">
-           <xpath expr="//page[1]" position="after" >
+           <notebook>
             <page name="Import Product" string="Importación">
               <group string="Importación">
                <field name="general_import_tax"/>
@@ -38,13 +40,13 @@
                <field name="salary_customs_agents"/>
               </group>
             </page>
-          </xpath>
+          </notebook>
       </field>
     </record>
 
         <record model="ir.ui.view" id="noms_tree_view">
             <field name="name">NOMS Tree</field>
-            <field name="model">l10n.mx.edi.noms.noms</field>
+            <field name="model">import.noms</field>
             <field name="arch" type="xml">
                 <tree>
                     <field name="code"/>
@@ -55,7 +57,7 @@
 
         <record model="ir.ui.view" id="noms_form_view">
             <field name="name">NOMS Form</field>
-            <field name="model">l10n.mx.edi.noms.noms</field>
+            <field name="model">import.noms</field>
             <field name="arch" type="xml">
                 <form>
                         <group>
@@ -68,7 +70,7 @@
 
         <record model="ir.actions.act_window" id="noms_action">
             <field name="name">NOMS</field>
-            <field name="res_model">l10n.mx.edi.noms.noms</field>
+            <field name="res_model">import.noms</field>
             <field name="view_mode">tree,form</field>
             <field name="view_id" ref="noms_tree_view"/>
         </record>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- Usuario Responsable de Importación-->
+        <record id="group_import_noms" model="res.groups">
+            <field name="name">NOMS y Arancel</field>
+            <field name="comment">Usuario Responsable de las NOMS para importación y el porcentaje de arancel</field>
+        </record>
+
+    </data>
+</odoo>
