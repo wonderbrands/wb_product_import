@@ -18,7 +18,7 @@
           </notebook>
       </field>
     </record>
-
+<!--
     <record  id="wb_purchase_import_form_inherit" model="ir.ui.view">
       <field name="name">wb_purchase_import_inherit</field>
       <field name="model">purchase.order</field>
@@ -43,7 +43,7 @@
           </notebook>
       </field>
     </record>
-
+-->
         <record model="ir.ui.view" id="noms_tree_view">
             <field name="name">NOMS Tree</field>
             <field name="model">import.noms</field>
