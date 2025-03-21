@@ -48,10 +48,10 @@
             <field name="name">NOMS Tree</field>
             <field name="model">import.noms</field>
             <field name="arch" type="xml">
-                <tree>
+                <list>
                     <field name="code"/>
                     <field name="name"/>
-                </tree>
+                </list>
             </field>
         </record>
 
